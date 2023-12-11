@@ -56,6 +56,8 @@ def train(model, device, train_dataloader, val_dataloader, save_dir="./out"):
 def evaluate(model, val_dataloader, device):
     model.to(device)
     
+    model.eval()
+    
     all_preds = []
     all_labels = []
 
